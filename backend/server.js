@@ -12,7 +12,10 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: [
+      process.env.CLIENT_URL || "http://localhost:3000", // Local dev URL
+      "https://sounds-of-canada.vercel.app", // Vercel frontend URL
+    ],
   })
 );
 
