@@ -9,6 +9,7 @@ Sounds of Canada is a music library web application that allows users to explore
 ### Installation
 1. Clone the repository:
 ```
+git clone https://github.com/SarahEddeb/SoundsOfCanada.git
 ```
 2. Install dependencies:
 ```
