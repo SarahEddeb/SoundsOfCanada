@@ -1,7 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 
 # Sounds of Canada
+App: https://sounds-of-canada.vercel.app/
 
 Sounds of Canada is a music library web application that allows users to explore and discover albums and artists from across Canada. Built with modern web technologies, the app integrates with the Discogs API to provide a comprehensive and dynamic library of music data, including album details and cover images. The app uses Chakra UI for styling and leverages OAuth authentication for secure access to the Discogs API.
 
@@ -17,9 +16,6 @@ git clone https://github.com/SarahEddeb/SoundsOfCanada.git
 npm install
 ```
 3. Authenticate through OAuth <br />
-**Update: The following steps go through authentication using OAuth on your own which you will not need. I have left my own .env file in the backend to make testing the app locally easier. I am aware this is not best practices but I would like to make this easier for whoever is testing the web app.**
-
-
 Follow here: https://www.discogs.com/developers#page:authentication,header:authentication-oauth-flow <br />
 4. Create a .env file in the backend folder with the following variables and values obtained from OAuth:
 ```
