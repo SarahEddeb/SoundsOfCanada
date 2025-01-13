@@ -188,10 +188,11 @@ export default function Home() {
     <Container>
       <Box mt={75} mb={75}>
         <Flex gap={4} align="center" mb={4} wrap="wrap">
-          <Heading as="h1" size="6xl" fontFamily="heading" fontWeight={500}>
-            <Highlight query="Canadian Albums" styles={{ color: "green.400" }}>
-              Explore Canadian Albums
-            </Highlight>
+          <Heading as="h1" size="6xl" fontFamily="heading" fontWeight={500} whiteSpace="normal">
+              Explore
+          </Heading>
+          <Heading as="h1" size="6xl" fontFamily="heading" fontWeight={500} whiteSpace="normal" color="green.400">
+              Canadian Albums
           </Heading>
         </Flex>
 
