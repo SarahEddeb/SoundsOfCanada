@@ -5,14 +5,14 @@ const express = require("express");
 const axios = require("axios");
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: process.env.CLIENT_URL || "http://localhost:3000",
   })
 );
 
@@ -63,33 +63,6 @@ app.get("/albums", async (req, res) => {
       per_page: 50, // Set the number of results per page
       page: page || 1, // Start with the first page
     };
-
-    let allResults = [];
-    let nextPageUrl = `${DISCOGS_BASE_URL}/database/search`;
-
-    // const fetchAllPages = async () => {
-    //   while (nextPageUrl) {
-    //     const response = await axios.get(nextPageUrl, { headers, params });
-    //     const { results, pagination } = response.data;
-
-    //     console.log(pagination)
-    //     console.log(params.page)
-    //     allResults = [...allResults, ...results];
-
-    //     // Check if there's a next page
-    //     // nextPageUrl = pagination.urls.next || null;
-
-    //     // Update params for the next request if not using `next` URL
-    //     if (pagination.page < pagination.pages) {
-    //       params.page = pagination.page + 1;
-    //     } else {
-    //       nextPageUrl = null;
-    //     }
-    //   }
-    // };
-
-    // await fetchAllPages();
-    // res.status(200).json({ results: allResults });
 
     const response = await axios.get(`${DISCOGS_BASE_URL}/database/search`, {
       headers,
