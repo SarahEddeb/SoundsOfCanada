@@ -16,6 +16,8 @@ import Filters from "@/components/Filters";
 import AlbumCardList from "@/components/AlbumCardList";
 import axios from "axios";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+
 /**
  * The Home component is the main entry point for the application, responsible for rendering
  * the user interface to explore Canadian albums. It manages the state for filters, favourites,
@@ -119,7 +121,7 @@ export default function Home() {
       try {
         // TODO loop through pages until reach the end
         // every time we get a batch we want to add an Album card list
-        const response = await axios.get("http://localhost:3001/albums", {
+        const response = await axios.get(`${apiUrl}/albums`, {
           params: {
             genre: filters.genre.length > 0 ? filters.genre : undefined,
             year: filters.year.length > 0 ? filters.year[0] : undefined,
@@ -164,7 +166,7 @@ export default function Home() {
       console.log("id: ", filters.artist[0].id);
       try {
         const response = await axios.get(
-          `http://localhost:3001/${filters.artist[0].id}/artists/albums`
+          `${apiUrl}/${filters.artist[0].id}/artists/albums`
         );
         console.log("responce: ", response.data);
 
