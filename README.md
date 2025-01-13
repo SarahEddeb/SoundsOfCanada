@@ -25,7 +25,7 @@ DISCOGS_OAUTH_TOKEN=your_discogs_oauth_token
 DISCOGS_OAUTH_TOKEN_SECRET=your_discogs_oauth_token_secret
 ```
 5. Configure the environment:
-Ensure Node.js (v16 or higher) and npm are installed.
+Ensure Node.js (v18 or higher) and npm are installed.
 Use your Discogs API credentials for the .env file.
 
 
