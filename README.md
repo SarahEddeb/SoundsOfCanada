@@ -16,7 +16,7 @@ npm install
 ```
 3. Authenticate through OAuth
 Follow here: https://www.discogs.com/developers#page:authentication,header:authentication-oauth-flow
-4. Create a .env file in the project root with the following variables:
+4. Create a .env file in the backend folder with the following variables and values obtained from OAuth:
 ```
 DISCOGS_CONSUMER_KEY=your_discogs_consumer_key
 DISCOGS_CONSUMER_SECRET=your_discogs_consumer_secret
@@ -29,7 +29,7 @@ Use your Discogs API credentials for the .env file.
 
 
 ### Running a Local Server
-1. Open 2 terminals
+1. Open two terminal windows
 2. Run the backend server
 ```
 cd backend
@@ -112,10 +112,3 @@ Chakra UI's server-side rendering may cause a mismatch between the server-render
 ### Empty Thumbnail Field for Album Covers
 Some API responses do not include a thumbnail field for album covers, resulting in missing images for albums and artists.
 A potential workaround is to use the Discogs search API endpoint for each album individually and extract the cover_image field from the search results. This approach increases accuracy but might slightly impact performance due to additional API calls.
-
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
