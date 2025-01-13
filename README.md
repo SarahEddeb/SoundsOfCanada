@@ -15,8 +15,11 @@ git clone https://github.com/SarahEddeb/SoundsOfCanada.git
 ```
 npm install
 ```
-3. Authenticate through OAuth
-Follow here: https://www.discogs.com/developers#page:authentication,header:authentication-oauth-flow
+3. Authenticate through OAuth <br />
+**Update: The following steps go through authentication using OAuth on your own which you will not need. I have left my own .env file in the backend to make testing the app locally easier. I am aware this is not best practices but I would like to make this easier for whoever is testing the web app.**
+
+
+Follow here: https://www.discogs.com/developers#page:authentication,header:authentication-oauth-flow <br />
 4. Create a .env file in the backend folder with the following variables and values obtained from OAuth:
 ```
 DISCOGS_CONSUMER_KEY=your_discogs_consumer_key
