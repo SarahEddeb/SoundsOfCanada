@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Sounds of Canada is a music library web application that allows users to explore and discover albums and artists from across Canada. Built with modern web technologies, the app integrates with the Discogs API to provide a comprehensive and dynamic library of music data, including album details and cover images. The app uses Chakra UI for styling and leverages OAuth authentication for secure access to the Discogs API.
 
+![image](https://github.com/user-attachments/assets/a2679a9b-10be-4fcd-a620-65b6d23deb3d)
 
 ### Installation
 1. Clone the repository:
