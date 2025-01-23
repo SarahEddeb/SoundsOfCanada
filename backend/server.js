@@ -91,7 +91,7 @@ app.get("/albums", async (req, res) => {
 app.get("/releases/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const response = await axios.get(`${DISCOGS_BASE_URL}/releases/${id}`);
+    const response = await axios.get(`${DISCOGS_BASE_URL}/releases/${id}`, {headers});
 
     res.status(200).json(response.data);
   } catch (error) {
@@ -113,7 +113,7 @@ app.get("/releases/:id", async (req, res) => {
 app.get("/artists/:id", async (req, res) => {
   try {
     const { id } = req.params; 
-    const response = await axios.get(`${DISCOGS_BASE_URL}/artists/${id}`);
+    const response = await axios.get(`${DISCOGS_BASE_URL}/artists/${id}`, {headers});
 
     res.status(200).json(response.data);
   } catch (error) {
@@ -139,7 +139,7 @@ app.get("/artists/:id/releases", async (req, res) => {
   try {
     const { id } = req.params;
     const response = await axios.get(
-      `${DISCOGS_BASE_URL}/artists/${id}/releases?sort=year&sort_order=desc`
+      `${DISCOGS_BASE_URL}/artists/${id}/releases?sort=year&sort_order=desc`, {headers}
     );
     res.status(200).json(response.data);
   } catch (error) {
@@ -165,12 +165,12 @@ app.get("/artists/:id/releases", async (req, res) => {
 app.get("/:id/artists/albums", async (req, res) => {
   try {
     const { id } = req.params;
-    const response = await axios.get(`${DISCOGS_BASE_URL}/releases/${id}`);
+    const response = await axios.get(`${DISCOGS_BASE_URL}/releases/${id}`, {headers});
 
     try {
       const artistID = response.data.artists[0].id;
       const innerResponse = await axios.get(
-        `${DISCOGS_BASE_URL}/artists/${artistID}/releases`
+        `${DISCOGS_BASE_URL}/artists/${artistID}/releases`, {headers}
       );
 
       res.status(200).json(innerResponse.data);
