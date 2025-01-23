@@ -111,5 +111,4 @@ function onScroll() {
 Chakra UI's server-side rendering may cause a mismatch between the server-rendered HTML and the client-rendered DOM. This can result in a "hydration error."
 
 ### Empty Thumbnail Field for Album Covers
-Some API responses do not include a thumbnail field for album covers, resulting in missing images for albums and artists.
-A potential workaround is to use the Discogs search API endpoint for each album individually and extract the cover_image field from the search results. This approach increases accuracy but might slightly impact performance due to additional API calls.
+Update: Forgot to include authentication headers in release GET request which led to empty thumbnail field.
