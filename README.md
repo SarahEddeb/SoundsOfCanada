@@ -1,5 +1,6 @@
 
 # Sounds of Canada
+## ***Please note this was a take-home interview assignment
 App: https://sounds-of-canada.vercel.app/
 
 Sounds of Canada is a music library web application that allows users to explore and discover albums released in Canada. Built with modern web technologies, the app integrates with the Discogs API to provide a comprehensive and dynamic library of music data, including album details and cover images. The app uses Chakra UI for styling and leverages OAuth authentication for secure access to the Discogs API.
